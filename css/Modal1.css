@@ -1,0 +1,90 @@
+#upload-file-detail {
+    float: right;
+    width: 47%;
+    height: 80%;
+    margin: 10px;
+    padding: 80px;
+}
+
+#upload-file {
+    float: left;
+    width: 47%;
+    height: 80%;
+    margin: 10px;
+    padding: 80px;
+}
+
+.file-input-textbox {
+    float: left;
+    height: 30px;
+    border: 1px solid rgba(34,36,38,.15);
+    outline: none;
+}
+
+.file-input-div {
+    position: relative;
+    width: 100px;
+    height: 30px;
+    overflow: hidden;
+}
+
+.file-input-button {
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    top: 0px;
+    background-color: #f0f0f0;
+    color: #666;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+}
+
+.file-input-hidden {
+    cursor: pointer;
+    font-size: 23px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: 0;
+
+    filter: alpha(opacity=0);
+    -ms-filter: "alpha(opacity=0)";
+    -khtml-opacity: 0;
+    -moz-opacity: 0;
+}
+ 
+.upload-detail {
+    width: 100px;
+    margin-top: 10px;
+    text-align: left;
+    font-weight: bold;
+}
+
+#upload-file-detail .content {
+    border: 1px solid rgba(34,36,38,.15);
+    outline: none;
+    height: 26px; 
+    width: 210px;
+}
+
+#upload-file-detail textarea {
+    border: 1px solid rgba(34,36,38,.15);
+    outline: none;
+}
+
+.upload_btn {
+    background-color: #f0f0f0;
+    color: #666;
+    height: 30px;
+    width: 55px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+    margin-left: 200px;
+    margin-top: 5px;
+}
