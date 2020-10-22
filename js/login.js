@@ -10,15 +10,20 @@
 
 async function login(){
 
-    let userID = $("#login__id").val();
+    let userEmail = $("#login__email").val();
+    let emailType = $("#login__email-selectbox options:selected").val();
+    let email = userEmail + "@" + emailType;
     let userPW = $("#login__pw").val();
 
-    if(userID === "" || userPW === ""){
+    if(userEmail === "" || userPW === ""){
         alert("모두 입력해주세요.")
+        return;
+    }else if(emailType === ""){
+        alert("이메일 종류를 선택해주세요."); 
         return;
     }else{
         let userData ={
-            userId : userID,
+            userId : email,
             password: userPW
         }
 
@@ -48,7 +53,7 @@ async function login(){
     
         window.location.href = "/";
     }
-
+    
 }
 
 function gosignup() {
