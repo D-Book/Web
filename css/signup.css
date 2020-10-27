@@ -1,67 +1,56 @@
-#dbook_signup {
-    margin: 10px;
-    width: 500px;
-    padding: 10px;
+.main__content-signup { 
+    width: 100%; 
+    height: 100%; 
+    display: -webkit-box; 
+    display: -ms-flexbox; 
+    display: flex; 
+    -webkit-box-align: center; 
+    -ms-flex-align: center; 
+    align-items: center; 
+    -webkit-box-pack: center; 
+    -ms-flex-pack: center; 
+    justify-content: center; 
+} 
 
-    position: absolute; 
-    left: 50%; 
-    top: 50%; 
-    transform: translate(-50%, -50%);
-
-    text-align: right;
+.signup-list {
+    margin: 10px 0 10px 0;
+    font-weight: bold;
+    font-size: 13px;
 }
 
-#dbook_signup .confirm-btn {
+.edit-textbox {
+    font-size: 15px;
+    border: 1px solid rgba(34,36,38,.15);
+    width: 300px;
+    height: 37px;
+    border-radius: .28571429rem;
+    text-indent: 9px;
+    outline: none;
+}
+
+.submit-btn {
     background-color: #f0f0f0;
     color: #666;
-    height: 45px;
-    width: 70px;
+    height: 30px;
+    width: 55px;
     font-size: 14px;
     font-weight: bold;
     border: none;
     border-radius: 3px;
     outline: none;
     cursor: pointer;
-    margin: 20px 3px 20px 20px;
+    margin-left: 245px;
 }
 
-#dbook_signup .submit-btn {
-    background-color: #363636;
-    color: white;
-    width: 500px;
-    height: 45px;
+.auth-btn {
+    background-color: #f0f0f0;
+    color: #666;
+    height: 30px;
+    width: 55px;
     font-size: 14px;
     font-weight: bold;
     border: none;
-    outline: none;
     border-radius: 3px;
+    outline: none;
     cursor: pointer;
 }
-
-#dbook_signup .login-item {
-    border: 1px solid #e0e0e0;
-    border-top: 0;
-    background: #fff;
-    box-sizing: border-box; 
-}
-
-#dbook_signup #top-line {
-    border-top: 1px solid #e0e0e0;
-}
-
-#dbook_signup .login-item-text {
-    display: inline-block;
-    width: 100px;
-    text-align: left;
-}
-
-#dbook_signup .login-input {
-    border: none;
-    box-shadow: none;
-    outline: none;
-    padding: 12px; 
-    padding-right: 0;
-    width: 480px;
-    line-height: 1.2;
-}
-

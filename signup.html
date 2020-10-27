@@ -1,37 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>D-Book | 회원가입</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <script
+        src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/signup.css">
+    <link rel="stylesheet" href="css/reviseSemantic.css"/>
+    <title>회원가입 | D-Book</title>
     <link rel="icon" href="http://bitly.kr/9tqY2vBiZ6A">
 </head>
 <body>
-    <div id="dbook_signup">
-        <div class="login-item" id="top-line">
-            <input type="text" name="id" class="login-input" placeholder="아이디">
-        </div>
-        <div class="login-item">
-            <input type="password" name="pw" class="login-input" placeholder="비밀번호">
-        </div>
-        <div class="login-item">
-            <input type="text" name="name" class="login-input" placeholder="이름"> 
-        </div>
-        <div class="login-item">
-            <input type="text" name="email" class="login-input" placeholder="이메일"> 
-        </div>  
-        <button class="confirm-btn" class="confirm-btn">인증번호 받기</button>
-        
-        <div class="login-item" id="top-line">
-            <input type="text" name="confirm" class="login-input" placeholder="인증">
-        </div>  
-        <button class="confirm-btn" class="confirm-btn">인증</button>
+    <header class="main__header-container">
+        <ul class="main__header-menu ui grid">
+            <li class="nine wide column"><img src="D-Book_Logo/D-Book_Logo.png" id="logo" onClick="location.href='main.html'"></li>
+        </ul>
+    </header>
+    <main class="main__content-signup">
+        <div class="signup">
+            <p><div class="signup-list">이메일</div>  <input type="email" name="email" class="edit-textbox"></p>
+            <span>@</span>
+                <select id="email-selectbox" class="ui dropdown">
+                        <option value="gmail.com">gmail.com</option>
+                        <option value="naver.com">naver.com</option>
+                </select>
+            <button class="auth-btn" onclick="emailAuth()">인증</button>
 
-        <div>
-            <input id="btn" class="submit-btn" type="submit" name="signup" value="회원 가입">
+              
+            <div class="signup__email-container" id="signup__email-authcode-container" hidden>
+                <div class="ui input">
+                    <input type="text" id="signup__email-authcode" placeholder="인증 코드">
+                    <input type="hidden" id="signup__email-authcode-hidden"/>
+                </div>
+                
+                <button id="signup__email-authcode-button" class="ui black button" onclick="emailCheck()">확인</button>
+            </div>
+            <p><div class="signup-list">비밀번호</div>  <input type="password" name="password" class="edit-textbox"></p>
+            <p><div class="signup-list">비밀번호 확인</div>  <input type="password" name="password-check" class="edit-textbox"></p>
+            <p><div class="signup-list">이름</div>  <input type="text" name="name" class="edit-textbox"></p>
+            <button class="submit-btn">제출</button>
         </div>
-    </div>
+    </main>
 </body>
 
 </html>

@@ -4,6 +4,7 @@
     <meta charset='utf-8'>
     <title>D-Book</title>
     <link rel="stylesheet" href="css/first.css">
+    <script type="text/javascript" src="login.js"></script>
 </head>
 <body>
 
@@ -13,9 +14,9 @@
             D-Book
         </header>
         <ul>
-            <li><input type="text" placeholder="ID" title="아이디"></li>
-            <li><input type="password" placeholder="PW" title="비밀번호"></li>
-            <li><button onclick="gomylibrary()">로그인</button></li>
+            <li><input type="text" id="login__id" placeholder="ID" title="아이디"></li>
+            <li><input type="password" id="login__password" placeholder="PW" title="비밀번호"></li>
+            <li><button id="login__button" onclick="gomylibrary()">로그인</button></li>
             <li><button onclick="gosignup()">회원가입</button></li>
         </ul>
     </section>
