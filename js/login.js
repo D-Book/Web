@@ -10,10 +10,10 @@
 
 async function login(){
 
-    let userEmail = $("#login__email").val();
-    let emailType = $("#login__email-selectbox options:selected").val();
+    let userEmail = $("#login__id").val();
+    let emailType = $("#email-selectbox options:selected").val();
     let email = userEmail + "@" + emailType;
-    let userPW = $("#login__pw").val();
+    let userPW = $("#login__password").val();
 
     if(userEmail === "" || userPW === ""){
         alert("모두 입력해주세요.")
@@ -33,7 +33,6 @@ async function login(){
             contentType : 'application/json',
             data : JSON.stringify(userData),
             beforeSend:()=>{
-                $("#loading__container").attr("style","display:inline-block;");
                 $("#login__button").attr("disabled",true);
             },
             error:()=>{
@@ -41,7 +40,6 @@ async function login(){
                 $("#login__button").attr("disabled",false);
             },
             complete:()=>{
-                $("#loading__container").attr("style","display:none;");
             }
         })
 
@@ -57,5 +55,5 @@ async function login(){
 }
 
 function gosignup() {
-    location.href='signup'
+    location.href='signup.html'
 }

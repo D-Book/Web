@@ -12,9 +12,9 @@ $(document).ready(function(){
 
 async function signup(){
 
-    const $password      = $("#signup__password").val();
-    const $passwordCheck = $("#signup__password-check").val();
-    const $name          = $("#signup__name").val();
+    const $password      = $("#password").val();
+    const $passwordCheck = $("#password-check").val();
+    const $name          = $("#name").val();
 
     if(signupInfo.emailFlag === false){
         alert("이메일을 설정해주세요.")
@@ -36,20 +36,20 @@ async function signup(){
             contentType : 'application/json',
             data : JSON.stringify(userData),
             beforeSend:()=>{
-                $("#loading__container").attr("style","display:inline-block;");
-                $("#signup__button").attr("disabled",true);
+                //$("#loading__container").attr("style","display:inline-block;");
+                $("#signup").attr("disabled",true);
             },
             error:()=>{
-                $("#signup__button").attr("disabled",false);
+                $("#signup").attr("disabled",false);
                 alert("회원가입 에러");
             },
             complete:()=>{
-                $("#loading__container").attr("style","display:none;");
+                //$("#loading__container").attr("style","display:none;");
             }
         })
 
         if(response.message != null){
-            $("#signup__button").attr("disabled",false);
+            $("#signup").attr("disabled",false);
             alert(response.message)
             return;
         }
@@ -59,10 +59,10 @@ async function signup(){
     }
 }
 
-async function emailCheck(){
+async function emailAuth(){
     
-    const emailID   = $("#signup__email").val();
-    const emailType = $("#signup__email-selectbox option:selected").val();
+    const emailID   = $("#email_input").val();
+    const emailType = $("#email-selectbox option:selected").val();
     const email     =  emailID + "@" + emailType;
    
     if(emailID === ""){
@@ -83,8 +83,8 @@ async function emailCheck(){
 
         const msg = email + " 이메일을 사용하시겠습니까?";
         if (confirm(msg)!=0) {
-            $("#signup__email").attr("readonly",true);
-            $('#signup__email-checkbtn').attr("disabled",true);
+            $("#email_input").attr("readonly",true);
+            $('email-selectbox').attr("disabled",true);
             signupInfo.emailFlag = true;
             signupInfo.email = email;
         } 

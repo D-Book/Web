@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
     <script
@@ -12,36 +12,55 @@
     <link rel="stylesheet" href="css/reviseSemantic.css"/>
     <title>회원가입 | D-Book</title>
     <link rel="icon" href="http://bitly.kr/9tqY2vBiZ6A">
+    <script type="text/javascript" src="js/signup.js"></script>
 </head>
 <body>
     <header class="main__header-container">
         <ul class="main__header-menu ui grid">
-            <li class="nine wide column"><img src="D-Book_Logo/D-Book_Logo.png" id="logo" onClick="location.href='main.html'"></li>
+            <li class="nine wide column">
+                <img src="D-Book_Logo/D-Book_Logo.png" id="logo" onClick="location.href='main.html'">
+            </li>
         </ul>
     </header>
+
     <main class="main__content-signup">
         <div class="signup">
-            <p><div class="signup-list">이메일</div>  <input type="email" name="email" class="edit-textbox"></p>
+            <p>
+                <div class="signup-list">이메일</div>  
+                <input type="email" id="email_input" name="email" class="edit-textbox">
+            </p>
+
             <span>@</span>
                 <select id="email-selectbox" class="ui dropdown">
                         <option value="gmail.com">gmail.com</option>
                         <option value="naver.com">naver.com</option>
                 </select>
             <button class="auth-btn" onclick="emailAuth()">인증</button>
-
               
             <div class="signup__email-container" id="signup__email-authcode-container" hidden>
                 <div class="ui input">
                     <input type="text" id="signup__email-authcode" placeholder="인증 코드">
                     <input type="hidden" id="signup__email-authcode-hidden"/>
                 </div>
-                
                 <button id="signup__email-authcode-button" class="ui black button" onclick="emailCheck()">확인</button>
             </div>
-            <p><div class="signup-list">비밀번호</div>  <input type="password" name="password" class="edit-textbox"></p>
-            <p><div class="signup-list">비밀번호 확인</div>  <input type="password" name="password-check" class="edit-textbox"></p>
-            <p><div class="signup-list">이름</div>  <input type="text" name="name" class="edit-textbox"></p>
-            <button class="submit-btn">제출</button>
+
+            <p>
+                <div class="signup-list">비밀번호</div>  
+                <input type="password" id="password" name="password" class="edit-textbox">
+            </p>
+
+            <p>
+                <div class="signup-list">비밀번호 확인</div>  
+                <input type="password" id="password-check" name="password-check" class="edit-textbox">
+            </p>
+
+            <p>
+                <div class="signup-list">이름</div>  
+                <input type="text" id="name" name="name" class="edit-textbox">
+            </p>
+
+            <button class="submit-btn" id="signup" onclick="signup()">제출</button>
         </div>
     </main>
 </body>
